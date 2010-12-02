@@ -1,0 +1,68 @@
+\documentclass{sig-alternate}
+
+\usepackage{subfigure}
+
+\begin{document}
+
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Ec}{\mathcal{V}}
+
+
+%\conferenceinfo{The 4th SNA-KDD Workshop}{'10 ( SNA-KDD'10),July 25, 2010 , Washington D.C. USA}
+\title{Studying  community growth in LiveJournal}
+\numberofauthors{3} 
+\author{
+\alignauthor
+Simla Ceyhan\\
+       \affaddr{Management Science and Engineering}\\
+       \affaddr{Stanford University}\\
+       \email{simlac@stanford.edu}
+\alignauthor
+Shirin Jalali\\
+       \affaddr{Center for Mathematics of Information}\\
+       \affaddr{California Institute of Technology}\\
+       \email{shirin@caltech.edu}}
+
+\maketitle
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\category{H2.8}{Database Applications}{Data Mining}
+\category{J.4}{Social and Behavioral Sciences}{Sociology}
+
+\terms{Human Factors, Measurement}
+\keywords{Social Networks, Community Growth}
+
+\section{Introduction}
+\label{sec:intro}
+\input{introduction.tex}
+
+\subsection{Related Literature}
+\label{sec:related}
+\input{related.tex}
+
+\section{Network data}
+\label{sec:network}
+\input{network_data}
+
+%\section{Some definitions}
+ 
+\section{Analysis}
+\label{sec:analysis}
+\input{analysis}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\input{conclusion}
+
+
+\section*{Acknowledgments}
+
+We would like to give our thanks to Professor Andrea Montanari for providing us with a lot of  constructive feedback during this work.
+
+\bibliographystyle{abbrv}
+\bibliography{lj_v2} 
+
+\end{document}

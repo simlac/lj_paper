@@ -1,0 +1,25 @@
+As mentioned before, in this paper we focus on LiveJournal which is an  online social network with more than 19 million members.  It is an active social network with an average of 300,000 updates a day. 
+Members maintain a blog, declare friends, and join communities. Thus there is a notion of a friendship graph, whose nodes correspond to users and edges correspond to friendship relationship. Let the undirected graph $\mathcal{G}=(\mathcal{V},\mathcal{E})$ represent the friendship structure among the members of LiveJournal. Each node $v\in\mathcal{V}$ represents one of the members, and each each edge $e=[v_1,v_2]\in\mathcal{E}$ shows that $v_1$ and $v_2$ are friends. 
+
+There are different communities in LiveJournal. Each member can join as many communities as he/she desires. Each community $\mathcal{C}$ corresponds to a subgroup of the members of the LJ, and induces a subgraph $\mathcal{G}_{\mathcal{C}}=[\mathcal{C},\mathcal{E}_{\mathcal{C}}]$ of the main graph $\mathcal{G}$ such that  each edge $e=[v_1,v_2]\in\mathcal{E}$ with $v_1\in\mathcal{C}$ and  $v_2\in\mathcal{C}$ belongs to $\mathcal{G}_{\mathcal{C}}$ as well.
+
+For this study, we followed the members of more than $2000$ communities, and  collected data over seven snapshots during a period of five months.  The time intervals between the snapshots is shown in Table \ref{tb:data}. At each snapshot, we recorded the  members of each of the 2000 communities. Moreover, for each  member, we registered his/her friends, both inside and outside the community. 
+
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Snapshot  & Time between the snapshot  \\
+  & and its previous one \\ \hline
+0 & -  \\ \hline
+1 & 1 week \\ \hline
+2 & 1 week \\ \hline
+3 & 1 week \\ \hline
+4 & 2 weeks \\ \hline
+5 & 8 weeks \\ \hline
+6 & 6 weeks \\ \hline
+\end{tabular}
+\end{center}\caption{Brief description of the data}
+\label{tb:data}
+\end{table}%
+

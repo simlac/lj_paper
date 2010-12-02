@@ -1,0 +1,154 @@
+\documentclass{sig-alternate}
+
+\usepackage{subfigure}
+
+ 
+
+
+\begin{document}
+
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Ec}{\mathcal{V}}
+
+
+%\conferenceinfo{The 4th SNA-KDD Workshop}{'10 ( SNA-KDD'10),July 25, 2010 , Washington D.C. USA}
+\title{Studying  community growth in LiveJournal}
+\numberofauthors{3} 
+\author{
+\alignauthor
+Simla Ceyhan\\
+       \affaddr{Management Science and Engineering}\\
+       \affaddr{Stanford University}\\
+       \email{simlac@stanford.edu}
+\alignauthor
+Shirin Jalali\\
+       \affaddr{Center for Mathematics of Information}\\
+       \affaddr{California Institute of Technology}\\
+       \email{shirin@caltech.edu}}
+
+\maketitle
+\begin{abstract}
+This paper studies growth of communities in LiveJournal which is  an online social network that has 
+user-defined communities. The primary goal of this work is to find features of communities that affect their growth in the future.  We studied about $2000$ communities  inside LiveJournal, and collected data from them in 7 snapshots spanned in a period of five months.  That is for each community at each snapshot, we recorded its members and their friends lists inside LiveJournal.
+
+For each member of a community, we define the notion of  \emph{attractiveness}, which reflects how successful she has been in attracting her friends to join the community. We find that the percentage of attractive members of a community in a short time interval, has a strong correlation with its growth rate in the future. We also tried to measure the correlation between the growth and some structural properties of the communities such as  clustering coefficient and average degree. None of them showed a similar evidence of strong correlation.
+
+\end{abstract}
+
+\category{H2.8}{Database Applications}{Data Mining}
+\category{J.4}{Social and Behavioral Sciences}{Sociology}
+
+\terms{Human Factors, Measurement}
+\keywords{Social Networks, Community Growth}
+
+
+\section{Introduction}
+
+\input{introduction.tex}
+
+\subsection{Related Literature}
+Many studies on online social networks and biological
+networks focused on properties of network evolution such as shrinking 
+diameters and edge creation \cite{kumar_tomkins, LKF, micro_evol}.
+These studies focus on understanding the change in the overall
+network over time. On the other hand, the evolution of the 
+underlying communities in a network has not been studied as much. 
+
+There is also a large body of work on identifying the communities in 
+networks \cite{newman, danon, www10}.
+A community of a network or tightly connected clusters is typically thought of
+as a group of nodes with more and/or better interactions amongst
+its members than between its members and the remainder of the
+network \cite{define_comm}. However, in our study, the communities are 
+already explicitly identified. As mentioned before, our focus is understanding 
+the mechanisms by which the communities grow.
+
+A previous study that inspired this work is  Backstrom
+et al. \cite{group_formation} paper, where the authors focus on the role of common
+friends on a community's formation and growth. They use decision-tree techniques
+to identify the properties of the social network that affect its evolution.
+
+%COMPARE WITH OUR RESULTS?????????????????
+
+\section{Network data}
+
+\input{network_data}
+
+%\section{Some definitions}
+ 
+
+
+\section{Analysis}
+
+\subsection{Definitions} \label{sec: definitions}
+\input{definitions}
+
+\subsection{Observation} \label{sec: initial}
+\input{initial_analysis}
+
+
+\subsection{Regression analysis}\label{sec: regression}
+\input{regression}
+
+\newpage
+\subsection{Some further analysis}
+\input{further}
+
+\section{Conclusion}
+
+We have studied six snapshots of about $2000$ communities from the online social network LiveJournal. Our main goal was to find the structural features of communities that can help us with the prediction of growth. We have found that the percentage of \emph{attractive} members of a community in a short time interval, has a strong correlation by its growth rate in the future. We also tried to measure the correlation between the growth and some structural properties of the communities such as  clustering coefficient and average degree. None of them showed evidence of strong correlation.
+
+When we focused on  attractiveness, we found that people are attractive for a short period, and it is not something intrinsic to the community. Also among the newly joined members, the percentage of attractive members is much higher. On the other hand, people are likely to be attractive in different communities that they belong to at the same time.  All these gives us the sense that attractiveness is strongly related to being active.
+
+\subsection{Future Work}
+
+We believe that the percentage of \emph{attractive} members of a community can be a good way to
+predict  community growth. The next step is to understand this notion of being \emph{attractive} more 
+thoroughly. Does our hypothesis of its being strongly related to activeness of a member is true? 
+Can we relate it to some inherent structure of a community? 
+
+Another future work is to come up with a model that predicts the growth of a community using the attractiveness measure. In order to examine the consistency of our results, applying similar analysis to user-defined communities in another social network  is also crucial.
+
+\section*{Acknowledgments}
+
+We would like to give our thanks to Professor Andrea Montanari for providing us with a lot of  constructive feedback during this work.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{social_ref}
+J.~Coleman, Foundations of Social Theory, Harvard, 1990.
+
+\bibitem{group_formation} L.~Backstrom, D.~Huttenlocher, J.~Kleinberg, X.~Lan, ``Group formation in large social networks: membership, growth, and evolution'', Proc.~of the $12^{\rm th}$ {\it ACM SIGKDD international conference on Knowledge discovery and data mining}, 2006
+
+\bibitem{book_anova}
+M.H.~Kutner, C.J.~Nachtsheim, J. Neter, W.~Li, \emph{ Applied Linear Statistical Models} (5th ed.), McGraw-Hill/Irwin.
+
+\bibitem{kumar_tomkins} R.~Kumar, J.~Novak, and A.~Tomkins, ``Structure and
+evolution of online social networks." In $12^{\rm th}$ KDD, pages~611-617, 2006.
+
+\bibitem{LKF} J.~Leskovec, J.~Kleinberg, C.~Faloutsos. ``Graph
+evolution: Densification and shrinking diameters." ACM
+TKDD, 1(1):2, 2007.
+
+\bibitem{micro_evol} J.~Leskovec, L.~Backstrom, R.~Kumar, A.~Tomkins.  ``Microscopic Evolution of Social Networks", ACM SIGKDD, 2008. 
+
+\bibitem{newman} M.E.J.~Newman. ``Detecting community structure in networks." \emph{The European Physical Journal B}, 38:321-330, 2004.
+
+\bibitem{danon} L.~Danon, J.~Duch, A.~Diaz-Guilera, A.~Arenas. ``Comparing community structure identification." \emph{Journal of Statistical Mechanics: Theory and Experiment}, 29(09):P09008, 2005.
+
+\bibitem{www10}  J.~Leskovec, K.~Lang, M.~Mahoney.``Empirical Comparison of Algorithms for Network Community Detection" ACM WWW {\it International conference on World Wide Web}, 2010. 
+
+\bibitem{define_comm} F.~Radicchi, C.~Castellano, F.~Cecconi, V.~Loreto,
+D.~Parisi. ``Defining and identifying communities in networks."
+{\it Proceedings of the National Academy of Sciences of the
+United States of America}, 101(9):2658-2663, 2004.
+
+\bibitem{clustering}
+D.J.~Watts, \emph{Small Worlds: The Dynamics of Networks Between Order and Randomness,} Princeton Univ. Press, Princeton, NJ, 1999.
+
+\end{thebibliography}
+
+
+\end{document}
