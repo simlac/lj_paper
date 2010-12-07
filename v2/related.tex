@@ -1,18 +1,37 @@
 Many studies on online social networks and biological
-networks focused on properties of network evolution such as shrinking 
-diameters and edge creation \cite{kumar_tomkins, LKF, micro_evol}.
-These studies focus on understanding the change in the overall
-network over time. On the other hand, the evolution of the 
-underlying communities in a network has not been studied as much. 
+networks have focused on properties of network evolution such as shrinking 
+diameters and edge creation. They mainly study the change in the overall
+network over time. We briefly outline some of the work in this area.
+Kumar et al.  \cite{kumar_tomkins} studied the evolution of structure within two large network data sets; Flickr and Yahoo! 360. Their study exposed a surprising segmentation of these networks into three regions: singletons who do not participate in the network; isolated communities that mostly display star structure; and a giant component with a well-connected core region. The authors also presented a simple model of network growth which captures these aspects of component structure. 
+In \cite{LKF}, Leskovec et al. examine macroscopic properties of network evolution, like densification and shrinking diameters while in \cite{micro_evol} the authors present a microscopic analysis of the edge-by-edge evolution of four large online social networks. In \cite{micro_evol} Leskovec et al. show that most new edges span very short distances, typically closing triangles and motivated by the observations, they develop a model of network evolution.
+There is also a more theoretical brach of research that focus on network evolution. One example is Fenner et al. \cite{stoch_evol}, where they present a stochastic model of network growth, where new actors may join the network, existing actors may become inactive and, at a later stage, may reactivate themselves. Their model captures the evolution of the network, assuming that actors attain new relations or become active according to the preferential attachment rule.
+Many of these above studies were performed to understand the growth of the network overall.
+On the other hand, in our study we focus on evolution of the 
+underlying communities in a network rather than the network itself. 
 
 There is also a large body of work on identifying the communities in 
-networks \cite{newman, danon, www10}.
+networks \cite{newman, danon, www10, comm_lin}.
 A community of a network or tightly connected clusters is typically thought of
 as a group of nodes with more and/or better interactions amongst
 its members than between its members and the remainder of the
-network \cite{define_comm}. However, in our study, the communities are 
+network \cite{define_comm}. An extensive review of the literature on
+community detection can be found in \cite{com_detect}. 
+However, our study is different than this body of work since the communities are 
 already explicitly identified. As mentioned before, our focus is understanding 
 the mechanisms by which the communities grow.
+
+A parallel body of work is concerned with user behavior in online communities.
+In \cite{pref_behav}, the authors explore a large corpus of online
+communities that vary widely in size, subject matter and privacy and focus on user
+engagement. They present a simple model explaining long-term heavy
+engagement as a combination of user-dependent and group dependent factors. 
+In \cite{dyn_conversations}, Kumar et al. analyze the structure of conversations by considering three different social datasets; Usenet groups, Yahoo! Groups, and Twitter. They propose simple mathematical models for the generation of basic conversation structures.
+In another study Goyal et al. \cite{leaders} introduce a frequent pattern mining approach 
+to discover leaders from community actions. They focus on identifying which users 
+are leaders when it comes to setting the trend for performing various actions.
+In \cite{user_grouping}, Shi et al. look at the online forums and study the patterns of user participation behavior, and the feature factors that influence such behavior on different forum datasets.
+Similarly, in \cite{groupthink}, Hui and Buchegger present a simple social influence model to 
+describe and explain the group joining process of users in online social networks.
 
 A previous study that inspired this work is  Backstrom
 et al. \cite{group_formation} paper, where the authors focus on the role of common
